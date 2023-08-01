@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&family=Righteous&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com/3.3.0"></script>
+    <style>
+      body {
+        font-family: 'Rajdhani', sans-serif;
+      }
+    </style>
+    <script>
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            fontFamily: {
+              sans: ["Roboto", "sans-serif"],
+              body: ["Righteous"],
+              mono: ["ui-monospace", "monospace"],
+            },
+          },
+          corePlugins: {
+            preflight: false,
+          },
+        };
+      </script>
+    <title>EMEM</title>
+    <link rel="icon" type="image/x-icon" href="/assets/logo/2.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favico/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favico/site.webmanifest">
+  </head>
+  <body>
+     <header>
+        <!-- Navigation bar -->
+        <nav
+          class="absolute z-10 flex w-full items-center justify-between  py-2 text-[#26c6da] hover:text-[#26c6da]  md:flex-wrap md:justify-start"
+          data-te-navbar-ref>
+          <div class="flex w-full  flex-wrap items-center justify-between">
+            <div class="flex items-center justify-between w-full">
+              <!-- Hamburger menu button -->
+              
+              <div class=" pt-5 lg:hidden">
+                <img src="./assets/logo/2.png" class="ml-5 md:w-[96px] md:h-[96px] w-[60px] h-[60px]" />
+             </div>
+            <div class="">
+                <button
+                  class="border-0 bg-transparent text-white pr-6 text-xl leading-none transition-shadow duration-150 ease-in-out hover:text-[#3fbbc7] focus:text-[#3fbbc7] dark:hover:text-white dark:focus:text-white lg:hidden"
+                  type="button"
+                  data-te-collapse-init
+                  data-te-target="#navbarSupportedContentX"
+                  aria-controls="navbarSupportedContentX"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <!-- Hamburger menu icon -->
+                  <span class="[&>svg]:w-10">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-7 w-7">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                  </span>
+                </button>
+               </div>
+           </div>
+      
+            <!-- Navigation links -->
+            <div
+              class="!visible hidden grow basis-[100%] items-center lg:px-[8%] lg:!flex lg:basis-auto justify-between"
+              id="navbarSupportedContentX"
+              data-te-collapse-item>
+              <div class=" pt-5 lg:block hidden">
+                <img src="./assets/logo/2.png" class="w-[126px] h-[126px]" />
+             </div>
+              <div class="">
+
+              <ul
+                class="pl-9 flex flex-col w-full py-9 lg:py-0 lg:flex-row lg:text-[#abf8e8] lg:bg-transparent bg-white font-body"  
+                data-te-navbar-nav-ref>
+                <li class="mb-5 mt-2 lg:my-auto lg:pr-2" data-te-nav-item-ref>
+                  <a
+                    class="block transition duration-150 ease-in-out hover:text-[#3fbbc7] disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
+                    href="#!"
+                    data-te-nav-link-ref
+                    data-te-ripple-init
+                    data-te-ripple-color="light"
+                    >home</a
+                  >
+                </li>
+                <li class="mb-5 lg:my-auto lg:pr-2" data-te-nav-item-ref>
+                  <a
+                    class="block transition duration-150 ease-in-out hover:text-[#3fbbc7] focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
+                    href="#about"
+                    data-te-nav-link-ref
+                    data-te-ripple-init
+                    data-te-ripple-color="light"
+                    >about</a
+                  >
+                </li>
+                <li class="mb-5 lg:my-auto lg:pr-2" data-te-nav-item-ref>
+                  <a
+                    class="block transition duration-150 ease-in-out hover:text-[#3fbbc7] focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
+                    href="#product"
+                    data-te-nav-link-ref
+                    data-te-ripple-init
+                    data-te-ripple-color="light"
+                    >our product</a
+                  >
+                </li>
+                <li class="mb-5 lg:my-auto lg:pr-2" data-te-nav-item-ref>
+                  <a
+                    class="block transition duration-150 ease-in-out hover:text-[#3fbbc7] focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
+                    href="#team"
+                    data-te-nav-link-ref
+                    data-te-ripple-init
+                    data-te-ripple-color="light"
+                    >our team</a
+                  >
+                </li>
+                <li class="mb-5 lg:my-auto lg:pr-16 " data-te-nav-item-ref>
+                    <a
+                      class="block transition duration-150 ease-in-out hover:text-[#3fbbc7] focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
+                      href="#contact"
+                      data-te-nav-link-ref
+                      data-te-ripple-init
+                      data-te-ripple-color="light"
+                      >contact us</a
+                    >
+                  </li>
+                  <li class="mb-2 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
+                    <a
+                      class="block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white [&.active]:text-black/90"
+                      href="#contact"
+                      data-te-nav-link-ref
+                      data-te-ripple-init
+                      data-te-ripple-color="light"
+                      ><button
+                      class="text-white tracking-widest px-5 py-2 lg:text-xs lg:px-[37px] font-semibold lg:py-5 rounded-[10px] bg-[#3fbbc7]"
+                    >
+                      book a ride
+                    </button></a
+                    >
+                  </li>
+
+              </ul>
+            </div>
+            </div>
+          </div>
+        </nav>
+      
+        <!-- Hero section with background image, heading, subheading and button -->
+        <div
+          class="relative overflow-hidden bg-cover bg-no-repeat"
+          >
+          <div class="">
+            <img src="./assets/images/johny-goerend-i8Z84Y_fC7k-unsplash.jpg" alt="" class="md:w-full h-[60vh] md:h-[100vh]">
+          </div>
+          <div
+            class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
+            style="background-color: rgba(0, 0, 0, 0.75)">
+            <div class="flex lg:h-full items-center justify-center">
+              <div class="px-[8%] text-center text-white md:px-12">
+                <p
+            class="text-xs mt-[45%] lg:mt-[22%] mx-[9%] leading-5 text-[#abf8e8] md:text-xl lg:text-center text-justify lg:text-2xl lg:leading-10"
+          >
+            We understand that switching to electric vehicles can be a big
+            decision, and we want to assure our customers that we will committed
+            to providing the best possible experience and addressing any
+            concerns they may have.
+            <a href="#about"
+                  >
+                    <svg class="w-[24px] h-[24px] lg:w-[42px] lg:h-[42px] mb-12 mt-9 lg:mt-[7%] mx-auto rotate-180" viewbox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_9_38)">
+                      <path d="M29.8482 19.2958L29.7424 8.79632C29.7213 6.70785 28.8715 4.71327 27.3798 3.25138C25.8882 1.78949 23.8769 0.980026 21.7884 1.00107C19.7 1.02211 17.7054 1.87194 16.2435 3.36359C14.7816 4.85525 13.9721 6.86654 13.9932 8.95502L14.099 19.4545C14.9054 18.8353 15.7811 18.312 16.7084 17.8951L16.618 8.92857C16.604 7.53625 17.1437 6.19539 18.1182 5.20095C19.0928 4.20652 20.4226 3.63997 21.8149 3.62594C23.2072 3.61191 24.5481 4.15155 25.5425 5.12614C26.5369 6.10074 27.1035 7.43046 27.1175 8.82277L27.2079 17.7893C28.1491 18.1894 29.0336 18.695 29.8482 19.2958Z" fill="white"/>
+                      <path d="M22.2116 42.9989C18.7308 43.034 15.3787 41.6849 12.8926 39.2484C10.4065 36.8119 8.99013 33.4876 8.95505 30.0069C8.91998 26.5261 10.2691 23.1739 12.7056 20.6878C15.1421 18.2017 18.4663 16.7853 21.9471 16.7503C25.4279 16.7152 28.7801 18.0643 31.2662 20.5008C33.7523 22.9373 35.1686 26.2616 35.2037 29.7424C35.2388 33.2231 33.8897 36.5753 31.4532 39.0614C29.0167 41.5475 25.6924 42.9639 22.2116 42.9989Z" fill="white"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_9_38">
+                      <rect width="42" height="42" fill="white" transform="translate(42.7874 0.789474) rotate(89.4227)"/>
+                      </clipPath>
+                      </defs>
+                      </svg>    
+                    </a>
+          </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      
+      
+
+      <!-- About  -->
+      <div id="about">
+        <div class="lg:hidden flex flex-col pt-10 px-[8%] h-auto">
+          <p
+            class="lg:text-[32px] pb-5 md:text-3xl text-xl text-[#3fbbc7] lg:font-semibold font-body"
+          >
+            about us
+          </p>
+          <div class="flex flex-col">
+            <div class="relative w-[100%] mb-5">
+              <img
+                class="w-full rounded-[20px] object-cover"
+                src="./assets/images/IMG_1967.JPG"
+                alt="img"
+              />
+            </div>
+            <div class="flex flex-col w-[100%] lg:w-[50%] justify-left">
+              <p
+                class="text-[#26c6da] lg:text-xl text-xs md:text-base lg:leading-9 leading-5 text-justify"
+              >
+                EMEM idea was created out of concern for the environment, out of
+                the certainty that we can contribute to the protection of our
+                environment and our communities.
+              </p>
+              <br />
+              <p
+                class="text-[#26c6da] lg:text-xl text-xs md:text-base lg:leading-9 leading-5 text-justify"
+              >
+                We are action-minded, solution-oriented entrepreneurs who are
+                passionate about spreading the culture of sustainable clean
+                mobility and putting it into practice.
+              </p>
+              <br />
+              <p
+                class="text-[#26c6da] pb-5 lg:text-xl text-xs md:text-base lg:leading-9 leading-5 text-justify"
+              >
+                EMEM will bring to society completely new solutions for urban
+                mobility. Just as the pioneering companies did in the twentieth
+                century when they manufactured the elevator, the car and other
+                inventions and innovative solutions that changed the way of life.
+                Therefore, EMEM promises you to work on improving your life
+                through innovation in your daily transportation
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="hidden lg:flex flex-col pt-10 px-[8%] h-auto">
+          <p
+            class="lg:text-[32px] pb-5 md:text-3xl text-xl text-[#3fbbc7] lg:font-semibold font-body"
+          >
+            about us
+          </p>
+          <div class="flex flex-col lg:flex-row">
+            <div class="flex flex-col w-[100%] lg:w-[50%] justify-left">
+              <p
+                class="text-[#26c6da] lg:text-xl text-xs md:text-base lg:leading-9 leading-5 text-justify"
+              >
+                EMEM idea was created out of concern for the environment, out of
+                the certainty that we can contribute to the protection of our
+                environment and our communities.
+              </p>
+              <br />
+              <p
+                class="text-[#26c6da] lg:text-xl text-xs md:text-base lg:leading-9 leading-5 text-justify"
+              >
+                We are action-minded, solution-oriented entrepreneurs who are
+                passionate about spreading the culture of sustainable clean
+                mobility and putting it into practice.
+              </p>
+              <br />
+              <p
+                class="text-[#26c6da] pb-5 lg:text-xl text-xs md:text-base lg:leading-9 leading-5 text-justify"
+              >
+                EMEM will bring to society completely new solutions for urban
+                mobility. Just as the pioneering companies did in the twentieth
+                century when they manufactured the elevator, the car and other
+                inventions and innovative solutions that changed the way of life.
+                Therefore, EMEM promises you to work on improving your life
+                through innovation in your daily transportation
+              </p>
+            </div>
+            <div class="relative lg:pl-5 w-[100%] lg:pb-[5%] lg:w-[50%] lg:justify-right">
+              <img
+                class="w-full lg:h-full rounded-[20px] object-cover"
+                src="./assets/images/IMG_1967.JPG"
+                alt="img"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="focus"
+        class="flex flex-col mt-8 lg:mt-10 mb-7 lg:mb-10 px-[8%] h-auto w-full"
+      >
+        <p
+          class="lg:text-[32px] pb-5 md:text-3xl text-xl text-[#3fbbc7] lg:font-semibold lg:text-right font-body"
+        >
+          our focus
+        </p>
+        <div class="flex flex-col lg:flex-row">
+          <div class="relative lg:pr-8 w-[100%] mb-5 lg:mb-0 lg:w-[50%]">
+            <img
+              class="w-[100%] lg:h-[100%] h-[290px] rounded-[20px] flex-auto object-cover"
+              src="./assets/images/15531015941407.jpg"
+              alt="img"
+            />
+          </div>
+          <p
+            class="w-[100%] lg:w-[50%] text-[#26c6da] lg:text-xl lg:leading-9 text-xs md:text-base leading-5 text-justify"
+          >
+            As a company specializing in mobility products, services and
+            solutions, our focus is on providing innovative delivery solutions
+            using small electric vehicles. Our advanced technology ensures
+            efficient and sustainable delivery, with a proven track record of
+            solving complex transportation problems such as pick up and delivery
+            with time windows. Our commitment to sustainability is aligned with
+            the future of the automotive and mobility industry, where
+            micro-electric vehicles are becoming increasingly popular. By
+            leveraging our expertise in mobility and electric vehicle
+            technology, we aim to provide reliable and efficient delivery
+            services that not only meet the needs of our customers, but also
+            contribute to sustainable future.
+          </p>
+        </div>
+      </div>
+      <div
+        class="bg-[url('./assets/images/tapio-haaja-I9SWvZ9sO2U-unsplash.jpg')] bg-no-repeat bg-cover bg-center w-full"
+      >
+        <div
+          class="flex flex-col justify-between p-[8%] w-full h-fit backdrop-brightness-50"
+        >
+          <p
+            class="m-auto leading-7 text-[#abf8e8] text-base md:text-xl lg:text-2xl lg:leading-10 justify-between text-justify"
+          >
+            Our motto is to spread the culture of sustainable green mobility.
+            Therefore, we at EMEM press the starting button for the future of
+            urban mobility in the region and aim to enable people to move by
+            themselves in a clean and sustainable way, by being one of the
+            leading providers in the region of small electric vehicle
+            transportation and means of charging and the smart platforms that
+            support them.
+          </p>
+        </div>
+      </div>
+      <div id="product" class="flex flex-col px-[8%] py-[30px] lg:py-10 w-full">
+        <p
+          class="lg:text-[32px] md:text-3xl text-xl mb-5 text-[#3fbbc7] lg:font-semibold font-body"
+        >
+          our products
+        </p>
+        <p
+          class="text-[#26c6da] lg:text-xl lg:leading-10 text-xs md:text-base leading-5 text-justify"
+        >
+          Our e-scooters and e-bikes are designed to be eco-friendly and
+          cost-effective, making them an excellent alternative to gas-powered
+          vehicles. By using our micro electric mobility solutions, people can
+          reduce their carbon footprint and contribute to improving air quality
+          in urban areas. Moreover, our smart charging platforms make it easy
+          and convenient for people to charge their vehicles at home, work, or
+          on-the-go, reducing the reliance on non-renewable energy sources. By
+          providing sustainable and convenient transportation options, our micro
+          electric mobility solutions help people live healthier, more
+          sustainable lifestyles.
+        </p>
+        <div
+          class="flex no-scrollbar overflow-x-scroll object-fill h-[264px] whitespace-nowrap pt-5 lg:py-5"
+        >
+          <img
+            class="rounded-[20px]"
+            src="./assets/images/IMG_2260.JPG"
+            alt="no-img"
+          />
+          <img
+            class="ml-5 rounded-[20px]"
+            src="./assets/images/Picture12.jpg"
+            alt="no-img"
+          />
+          <img
+            class="ml-5 rounded-[20px]"
+            src="./assets/images/Picture13.jpg"
+            alt="no-img"
+          />
+          <img
+            class="ml-5 rounded-[20px]"
+            src="./assets/images/Picture6.jpg"
+            alt="no-img"
+          />
+          <img
+            class="ml-5 rounded-[20px]"
+            src="./assets/images/Picture26.jpg"
+            alt="no-img"
+          />
+          <img
+            class="ml-5 rounded-[20px]"
+            src="./assets/images/Picture17.png"
+            alt="no-img"
+          />
+          <img
+            class="ml-5 rounded-[20px]"
+            src="./assets/images/Picture16.png"
+            alt="no-img"
+          />
+          <img
+            class="ml-5 rounded-[20px]"
+            src="./assets/images/Picture1.jpg"
+            alt="no-img"
+          />
+        </div>
+      </div>
+      <div
+        class="bg-[url('./assets/images/6287db123a93864f9e0efca0_Never-Look-For-Parking-Again-1.jpg')] mb-8 lg:mb-10 bg-no-repeat bg-cover bg-center w-full"
+      >
+        <div
+          class="flex flex-col justify-between p-[8%] w-full h-fit backdrop-brightness-50"
+        >
+          <p
+            class="m-auto leading-7 text-[#abf8e8] text-base md:text-xl lg:text-2xl lg:leading-10 justify-between text-justify"
+          >
+            When it comes to the delivery of goods or the transportation, the
+            first and last mile can be the most challenging and inefficient
+            parts of the process. That's where our company comes in with our
+            innovative first-mile and last-mile clean mobility services. Our
+            planned fleet of micro electric vehicles are perfect for navigating
+            crowded urban areas and delivering goods with minimal environmental
+            impact. Whether it's the first mile from a warehouse to a
+            distribution center, or the last mile from a delivery hub to a
+            customer's doorstep, our micro electric vehicles will provide a
+            reliable and sustainable solution. And with our state-of-the-art
+            tracking system, you'll always know where your goods are in the
+            delivery process.
+          </p>
+        </div>
+      </div>
+      <div id="team" class="flex flex-col px-[8%]">
+        <p
+          class="lg:text-[32px] md:text-3xl text-xl text-[#3fbbc7] lg:font-semibold font-body"
+        >
+          our team
+        </p>
+        <div class="flex no-scrollbar overflow-x-auto text-[#26c6da] whitespace-nowrap py-5">
+          <div
+            class="flex-col shrink-0 border-solid border-4 border-gray-100 rounded-[20px] mr-2.5 lg:mr-[22px] w-[285px]"
+          >
+            <img
+              src="./assets/images/724x724 Sustainability_0.png"
+              class="rounded-full pr-10 pl-[42px] pb-10 pt-5"
+              alt="no-img"
+            />
+            <p class="pl-[26px] text-base font-semibold">Albert</p>
+            <p class="py-5 pl-[26px] text-base">Director</p>
+            <div>
+              <span class="mr-5 pl-[26px] text-sky-700 text-[32px]"
+                ><a href="#" class="fa fa-linkedin"></a
+              ></span>
+              <span class="text-sky-500 text-[32px]"
+                ><a href="#" class="fa fa-twitter"></a
+              ></span>
+            </div>
+          </div>
+          <div
+            class="flex-col shrink-0 border-solid border-4 border-gray-100 rounded-[20px] mr-2.5 lg:mr-[22px] w-[285px]"
+          >
+            <img
+              src="./assets/images/724x724 Sustainability_0.png"
+              class="rounded-full pr-10 pl-[42px] pb-10 pt-5"
+              alt="no-img"
+            />
+            <p class="pl-[26px] text-base font-semibold">Albert</p>
+            <p class="py-5 pl-[26px] text-base">Director</p>
+            <div>
+              <span class="mr-5 pl-[26px] text-sky-700 text-[32px]"
+                ><a href="#" class="fa fa-linkedin"></a
+              ></span>
+              <span class="text-sky-500 text-[32px]"
+                ><a href="#" class="fa fa-twitter"></a
+              ></span>
+            </div>
+          </div>
+          <div
+            class="flex-col shrink-0 border-solid border-4 border-gray-100 rounded-[20px] mr-2.5 lg:mr-[22px] w-[285px]"
+          >
+            <img
+              src="./assets/images/724x724 Sustainability_0.png"
+              class="rounded-full pr-10 pl-[42px] pb-10 pt-5"
+              alt="no-img"
+            />
+            <p class="pl-[26px] text-base font-semibold">Albert</p>
+            <p class="py-5 pl-[26px] text-base">Director</p>
+            <div>
+              <span class="mr-5 pl-[26px] text-sky-700 text-[32px]"
+                ><a href="#" class="fa fa-linkedin"></a
+              ></span>
+              <span class="text-sky-500 text-[32px]"
+                ><a href="#" class="fa fa-twitter"></a
+              ></span>
+            </div>
+          </div>
+          <div
+            class="flex-col shrink-0 border-solid border-4 border-gray-100 rounded-[20px] w-[285px]"
+          >
+            <img
+              src="./assets/images/724x724 Sustainability_0.png"
+              class="rounded-full pr-10 pl-[42px] pb-10 pt-5"
+              alt="no-img"
+            />
+            <p class="pl-[26px] text-base font-semibold">Albert</p>
+            <p class="py-5 pl-[26px] text-base">Director</p>
+            <div>
+              <span class="mr-5 pl-[26px] text-sky-700 text-[32px]"
+                ><a href="#" class="fa fa-linkedin"></a
+              ></span>
+              <span class="text-sky-500 text-[32px]"
+                ><a href="#" class="fa fa-twitter"></a
+              ></span>
+            </div>
+          </div>
+        </div>
+
+        <div id="contact" class="flex flex-col py-10 w-full">
+          <div>
+            <p
+              class="lg:text-[32px] md:text-3xl text-xl text-[#3fbbc7] mb-5 lg:font-semibold font-body"
+            >
+              get in touch
+            </p>
+            <p
+              class="text-[#26c6da] mb-5 lg:text-xl lg:leading-9 text-base md:text-base leading-7 text-justify"
+            >
+              Do you have an enquiry about <br />
+              our solutions, products or services?
+            </p>
+          </div>
+          <div class="flex flex-col lg:flex-row">
+            <div class="w-[100%] lg:w-[49%] mb-5 lg:mb-0 lg:mr-5">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d738.6310102932028!2d55.3810355408531!3d25.12483980353209!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f64405d99a8e3%3A0x8ace9c6fbf110ed1!2sDubai%20Silicon%20Oasis%20Authority!5e0!3m2!1sen!2sae!4v1686161994694!5m2!1sen!2sae"
+                class="w-full h-[213px] md: h-[400px] lg:h-[368px] rounded-[20px]"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <form
+              action="www.getform.io"
+              method="POST"
+              class="flex flex-col w-full lg:w-[50%]"
+            >
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                class="shadow-[0_0_5px_rgba(0,0,0,0.25)] py-3 mb-[30px] pl-4 bg-gray-100 border-2 text-base border-gray-100 rounded-md text-black"
+              />
+              <input
+                type="text"
+                name="pno"
+                placeholder="Mobile Number"
+                class="shadow-[0_0_5px_rgba(0,0,0,0.25)] py-3 mb-[30px] pl-4 bg-gray-100 border-2 text-base border-gray-100 rounded-md text-black"
+              />
+              <input
+                type="text"
+                name="email"
+                placeholder="Email address"
+                class="shadow-[0_0_5px_rgba(0,0,0,0.25)] py-3 mb-[30px] pl-4 bg-gray-100 border-2 text-base border-gray-100 rounded-md text-black"
+              />
+              <textarea
+                placeholder="Message"
+                rows="9"
+                class="placeholder:text-left shadow-[0_0_5px_rgba(0,0,0,0.25)] mb-[30px] pt-6 pl-3 bg-gray-100 border-2 text-base border-gray-100 rounded-md text-black"
+              ></textarea>
+              <button
+                class="text-white bg-[#3fbbc7] text-sm lg:text-base rounded-md py-4 font-body"
+              >
+                Send
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+        <div class="flex flex-col bg-[#3fbbc7] px-[8%] w-full">
+          <div class="flex flex-col w-full lg:flex-row">
+            <div class="flex flex-col w-full lg:w-[405px] mt-2.5 lg:mt-10">
+              <img src="./assets/logo/2.png" class="w-[126px] h-[126px]" />
+              <p
+                class="text-white text-sm lg:text-base lg:leading-7 leading-6 text-justify"
+              >
+                EMEM idea was created out of concern for the environment, out of
+                the certainty that we can contribute to the protection of our
+                environment and our communities.
+              </p>
+            </div>
+            <div class="flex lg:px-5 mt-[30px] lg:mt-[42px] lg:w-4/5">
+              <ul class="text-white w-[50%] lg:text-base text-sm md:text-base">
+                <li
+                  class="lg:text-xl mb-3 lg:font-semibold text-base md:text-xl text-white font-body"
+                >
+                  our company
+                </li>
+                <a href="#about"><li class="mb-2">About Us</li></a>
+                <a href="#focus"><li class="mb-2">Our Focus</li></a>
+                <a href="#team"><li class="mb-2">Our Team</li></a>
+                <a href="#contact"><li>Contact Us</li></a>
+              </ul>
+
+              <ul
+                class="text-white w-[50%] ml-5 lg:text-base text-sm md:text-base"
+              >
+                <li
+                  class="lg:text-xl mb-3 lg:font-semibold text-base md:text-xl text-white font-body"
+                >
+                  products
+                </li>
+                <li class="mb-2">E-Scooters</li>
+                <li>E-Bikes</li>
+              </ul>
+            </div>
+            <div class="flex flex-col mt-[30px] lg:mt-[42px] lg:px-5 lg:w-1/4">
+              <p
+                class="lg:text-xl mb-3 lg:font-semibold text-base md:text-xl text-white font-body"
+              >
+                follow us
+              </p>
+              <ul class="flex text-white lg:text-[42px] text-[32px]">
+                <li class="lg:mr-5 mr-3.5">
+                  <a href="#" class="fa fa-facebook"></a>
+                </li>
+                <li class="lg:mr-5 mr-3.5">
+                  <a href="#" class="fa fa-linkedin"></a>
+                </li>
+                <li class="lg:mr-5 mr-3.5">
+                  <a href="#" class="fa fa-youtube"></a>
+                </li>
+                <li class="lg:mr-5 mr-3.5">
+                  <a href="#" class="fa fa-twitter"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <hr class="w-full bg-white h-[1px]" />
+          <div
+            class="pt-5 pb-10 lg:text-base text-xs bg-[#3fbbc7] text-white lg:text-center"
+          >
+            <p>
+              EMEM - Copyright 2023 | All Rights Reserved - Designed & Developed
+              by Meerana Technologies LLP
+            </p>
+          </div>
+       
+      </div>
+      
+      <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+  </body>
+</html>
